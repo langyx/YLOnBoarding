@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct YLOnBoardingItem: Decodable {
+public struct YLOnBoardingItem: Decodable {
     let icon: String
     let title: String
     var description: String = ""
@@ -15,5 +15,5 @@ struct YLOnBoardingItem: Decodable {
 
 
 extension YLOnBoardingItem: Identifiable {
-    var id: UUID { return UUID() }
+    public var id: UUID { return UUID() }
 }

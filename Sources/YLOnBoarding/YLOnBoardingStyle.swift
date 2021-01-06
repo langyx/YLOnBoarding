@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct YLOnBoardingStyle {
+public struct YLOnBoardingStyle {
     var mainColor : Color = .black
     var accentColor : Color = .blue
 }

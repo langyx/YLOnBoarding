@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct YLOnBoarding: View {
+public struct YLOnBoarding: View {
     
     let title: String
-    let style: YLOnBoardingStyle
+    var style: YLOnBoardingStyle = YLOnBoardingStyle()
     let items: [YLOnBoardingItem]
     
-    var body: some View {
+    public var body: some View {
         VStack {
             Text(title)
                 .font(.largeTitle)
