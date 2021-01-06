@@ -8,13 +8,41 @@
 import SwiftUI
 
 struct YLOnBoarding: View {
+    
+    let title: String
+    let style: YLOnBoardingStyle
+    let items: [YLOnBoardingItem]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(title)
+                .font(.largeTitle)
+                .foregroundColor(style.mainColor)
+                .fontWeight(.bold)
+                .padding(.horizontal, 40)
+                .padding(.vertical, 15)
+                .multilineTextAlignment(.center)
+            
+            ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
+                VStack(spacing: 20) {
+                    ForEach(items) {
+                        item in
+                        YLOnBoardingRow(item: item, style: style)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 25)
     }
 }
 
 struct YLOnBoarding_Previews: PreviewProvider {
     static var previews: some View {
-        YLOnBoarding()
+        let items = [
+            YLOnBoardingItem(icon: "bag.fill.badge.plus", title: "New content", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
+            YLOnBoardingItem(icon: "bag.fill.badge.plus", title: "New content", description: "Discover new content in this update"),
+            YLOnBoardingItem(icon: "bag.fill.badge.plus", title: "New content", description: "Discover new content in this update")
+        ]
+        return YLOnBoarding(title: "Discover new features", style: YLOnBoardingStyle(), items: items)
     }
 }
