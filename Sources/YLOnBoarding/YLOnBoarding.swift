@@ -10,8 +10,14 @@ import SwiftUI
 public struct YLOnBoarding: View {
     
     let title: String
-    var style: YLOnBoardingStyle = YLOnBoardingStyle()
+    let style: YLOnBoardingStyle
     let items: [YLOnBoardingItem]
+    
+    public init(title: String, style: YLOnBoardingStyle = YLOnBoardingStyle(), items: [YLOnBoardingItem]) {
+        self.title = title
+        self.style = style
+        self.items = items
+    }
     
     public var body: some View {
         VStack {

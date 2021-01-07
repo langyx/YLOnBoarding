@@ -8,6 +8,11 @@
 import SwiftUI
 
 public struct YLOnBoardingStyle {
-    var mainColor : Color = .black
-    var accentColor : Color = .blue
+    var mainColor: Color
+    var accentColor: Color
+
+    public init(mainColor: Color = .black, accentColor: Color = .blue) {
+        self.mainColor = mainColor
+        self.accentColor = accentColor
+    }
 }

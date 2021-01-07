@@ -10,7 +10,13 @@ import Foundation
 public struct YLOnBoardingItem: Decodable {
     let icon: String
     let title: String
-    var description: String = ""
+    let description: String
+    
+    public init(icon: String, title: String, description: String = "") {
+        self.icon = icon
+        self.title = title
+        self.description = description
+    }
 }
 
 
