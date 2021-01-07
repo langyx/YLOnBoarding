@@ -29,7 +29,7 @@ public struct YLOnBoarding: View {
                 .padding(.vertical, 15)
                 .multilineTextAlignment(.center)
             
-            ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
                     ForEach(items) {
                         item in
