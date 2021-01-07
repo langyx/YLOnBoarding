@@ -1,8 +1,8 @@
 language: swift
 osx_image: xcode12.2
 xcode_project: YLOnBoarding.xcodeproj # path to your xcodeproj folder
-xcode_scheme: YLOnBoardingTests
-xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone X
+xcode_scheme: YLOnBoarding-Package
+xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 11
 
 branches:
     only:
