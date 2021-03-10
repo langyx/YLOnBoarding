@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/langyx/YLOnBoarding.svg?branch=main)](https://travis-ci.org/langyx/YLOnBoarding)
 
-![This is a alt text.](/images/SS1.png "OnBoarding Screenshot")
+![This is a alt text.](/Images/SS1.png "OnBoarding Screenshot")
 
 ## Installation
 
