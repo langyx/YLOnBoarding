@@ -25,7 +25,7 @@ struct YLOnBoardingRow: View {
             image
                 .font(.title)
                 .foregroundColor(style.accentColor)
-                //.frame(maxWidth: 40, alignment: .center)
+                .frame(maxWidth: 35, alignment: .center)
             VStack(alignment: .leading) {
                 Text(LocalizedStringKey(item.title))
                     .font(.headline)
