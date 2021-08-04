@@ -21,24 +21,28 @@ public struct YLOnBoarding: View {
     
     public var body: some View {
         VStack {
-            Text(title)
-                .font(.largeTitle)
-                .foregroundColor(style.mainColor)
-                .fontWeight(.bold)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 15)
-                .multilineTextAlignment(.center)
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 20) {
-                    ForEach(items) {
-                        item in
-                        YLOnBoardingRow(item: item, style: style)
-                    }
+            if !title.isEmpty {
+                Text(title)
+                    .font(.title)
+                    .foregroundColor(style.mainColor)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+            }
+            verticalContent
+        }
+        .padding(.horizontal)
+    }
+    
+    private var verticalContent: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(spacing: 20) {
+                ForEach(items) {
+                    item in
+                    YLOnBoardingRow(item: item, style: style)
                 }
             }
         }
-        .padding(.horizontal, 25)
+
     }
 }
 

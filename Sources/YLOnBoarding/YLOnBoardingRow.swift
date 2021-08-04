@@ -23,15 +23,16 @@ struct YLOnBoardingRow: View {
     var body: some View {
         HStack(alignment: .center) {
             image
-                .font(.largeTitle)
+                .font(.headline)
                 .foregroundColor(style.accentColor)
-                .frame(maxWidth: 60, alignment: .center)
-            VStack(alignment: .leading, spacing: 3) {
-                Text(item.title)
+                //.frame(maxWidth: 40, alignment: .center)
+            VStack(alignment: .leading) {
+                Text(LocalizedStringKey(item.title))
                     .font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(style.mainColor)
-                Text(item.description)
+                Text(LocalizedStringKey(item.description))
+                    .multilineTextAlignment(.leading)
                     .font(.subheadline)
                     .foregroundColor(style.mainColor)
             }
